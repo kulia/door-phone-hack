@@ -1,4 +1,4 @@
-door-phone-hack
+Doorphone Hack
 ===============
 
 This is a hack that allows you to open the front door to an apartment building with help of a smart phone's browser.
