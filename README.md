@@ -9,7 +9,7 @@ By adding a Relay over the button that opens the block’s front door it is poss
 
 You only need [RPi.GPIO]:
 
-	  $ wget http://pypi.python.org/packages/source/R/RPi.GPIO/RPi.GPIO-0.1.0.tar.gz
+	$ wget http://pypi.python.org/packages/source/R/RPi.GPIO/RPi.GPIO-0.1.0.tar.gz
   	$ tar zxf RPi.GPIO-0.1.0.tar.gz
   	$ cd RPi.GPIO-0.1.0
   	$ sudo python setup.py install
