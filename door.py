@@ -21,12 +21,10 @@ def send_message(conn, s, message): # Still Buggy
 	html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> ';
 	conn.send(html + message)
 
-
 def close_socket(conn, s):
 	conn.close()
 
 def main():
-
 	GPIO.setup(door_pin, GPIO.OUT)
 
 	# Create Socket
@@ -36,7 +34,6 @@ def main():
 
 	print 'Wait for connection'
 
-	
 	while True:
 
 		conn, addr = s.accept() 
