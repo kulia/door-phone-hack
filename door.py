@@ -9,21 +9,6 @@ BUFFER_SIZE = 20  # Normally 1024, but we want fast response
 
 door_pin = 12 # That is GPIO 18
 
-def open_door(time):
-	GPIO.output(door_pin, True)
-	sleep(time)
-	GPIO.output(door_pin, False)
-
-def wait_for_user(conn, s):
-	conn.recv(BUFFER_SIZE)
-
-def send_message(conn, s, message): # Still Buggy
-	html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> ';
-	conn.send(html + message)
-
-def close_socket(conn, s):
-	conn.close()
-
 def main():
 	GPIO.setup(door_pin, GPIO.OUT)
 
@@ -46,6 +31,21 @@ def main():
 		
 		close_socket(conn, s)
 		print "Door Closed"
+
+def open_door(time):
+	GPIO.output(door_pin, True)
+	sleep(time)
+	GPIO.output(door_pin, False)
+
+def wait_for_user(conn, s):
+	conn.recv(BUFFER_SIZE)
+
+def send_message(conn, s, message): # Still Buggy
+	html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> ';
+	conn.send(html + message)
+
+def close_socket(conn, s):
+	conn.close()
 
 if __name__ == "__main__":
     main()
