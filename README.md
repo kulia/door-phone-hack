@@ -22,10 +22,14 @@ To make the script door.py run at boot, add 'python /"path"/DoorOpenLED/door.py'
 
 A description of the circuit that is needed is described in circuit_door.png. In the script door.py pin 12 (GPIO 18) is used. The RSPI is also used for power supply and ground. The Relay should be connected parallel to the button that open's the door.
 
+![circuit](circuit_door.png)
+
 ## Network Setup
 
 This hack will not describe the implementation of an website or any more sophisticated network tool to make this hack become safer. 
 
 To make the hack work with a global IP you need to redirect your routers traffic to the RSPI's local IP with the correct port (port 9095 in this example). Also using services like noip.com will give you an URL. This will be essential if you are to use this hack from outside your home.
+
+
 
 
